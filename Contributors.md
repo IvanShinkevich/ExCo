@@ -4,8 +4,8 @@ Ivan Shinkevich
 
 2014ivanee@gmail.com
 
-Dmitry Lishko
+Bozhena Mesiachik
 
-1268620@gmail.com
+bmesiachik@gmail.com
 
 _To find more information about joining us -- write to any of these emails_`
