@@ -10,11 +10,11 @@ As a user I have an opportunity to view comments and ratings of other users, in 
 
 ###№3 
  
-As a user I have an opportunity to leave comments und appreciations with the purpose to express my oppinion und emotions, share experiences, create a certain image of the tour/route/place. 
+As a user I have an opportunity to leave comments and appreciations with the purpose to express my opinion and emotions, share experiences, create a certain image of the tour/route/place. 
  
 ###№4 
  
-As a guest I have an opportunity to create account to order excursions/leaving comments. 
+As a guest I have an opportunity to create account to order excursions/leave comments. 
  
 ###№5 
  
