@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<order name="Minsk center" type="Historical" pointsAmount="12" rating='5' /> <!-- Types:Historical,walking,shopping,by transport; pointsAmount - form 1 to 14; rating - from 0 to 5-->
