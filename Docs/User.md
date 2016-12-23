@@ -107,3 +107,6 @@ As an administrator, I can block users on the site to meet the interests of site
 
 As the creator of the service I provide feedback from users to improve service.
 
+### №28
+
+As an owner I can write news about it to make Users involved in different activites,vote on some topics and to place the info on any changes
