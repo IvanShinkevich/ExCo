@@ -1,0 +1,56 @@
+$(function() {
+	$('.selector-link').click(selectorLinkClick);
+});
+
+var selectorLinkClick = function() {
+	$field = $(this);
+	var fieldParentID = $field.data('parentId'); //$field.attr('id');
+	//var m = fieldParentID.indexOf('menu');
+	//var divID = fieldParentID.substr(0, m) + 'content';
+	var fieldName = $field.data('name');
+	var divID = '#' + fieldParentID; //.replace(/\./g, "\\\.")
+	var divParent = $(divID.replace(/\./g, "\\\.")); //$(divID);//
+	var divShowID = '#' + fieldParentID + '.content.' + fieldName;
+	var divShow = $(divShowID.replace(/\./g, "\\\."));
+
+	var selectedName = divParent.data('selected');
+	var showDiv = 0;
+	if (fieldName != selectedName) {
+		showDiv = 1;
+	}
+	//var divLinkShowID1 = '#' + fieldParentID + '.menu-active-div.' + fieldName;
+	//var divLinkShow1 = $(divLinkShowID1.replace(/\./g, "\\\."));
+	var divLinkShowID = '#' + fieldParentID + '.menu-link-div.' + fieldName;
+	var divLinkShow = $(divLinkShowID.replace(/\./g, "\\\."));
+	//divParent.html('plus2');
+
+	var divHideID = '#' + fieldParentID + '.content.' + selectedName;
+	var divHide = $(divHideID.replace(/\./g, "\\\."));
+	
+	//var divLinkHideID1 = '#' + fieldParentID + '.menu-active-div.' + selectedName;
+	//var divLinkHide1 = $(divLinkHideID1.replace(/\./g, "\\\."));
+	var divLinkHideID = '#' + fieldParentID + '.menu-link-div.' + selectedName;
+	var divLinkHide = $(divLinkHideID.replace(/\./g, "\\\."));
+	
+	//alert('divID=' + fieldParentID + ' selected=' + selectedName);
+	//+ fieldName + ' dhid=' + divHideID + ' dh=' + divHide + ' ' + divParent + ' ' + selectedName);
+	
+	//divHide.hide(150);
+	divHide.hide(150);
+	divHide.addClass('hidden');
+	//divLinkHide.addClass('');
+	divLinkHide.removeClass('selected');
+	divParent.data('selected', '');
+	//divShow.show(150);
+	if (showDiv) {
+		divShow.show(150);
+		divShow.removeClass('hidden');
+		divLinkShow.addClass('selected');
+		divParent.data('selected', fieldName);
+	}
+	
+	//divLinkShow.removeClass('');
+	
+	
+	return false;
+}

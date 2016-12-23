@@ -1,0 +1,44 @@
+(function ($) {
+
+/**
+* @function
+* @property {object} jQuery plugin which runs handler function once specified element is inserted into the DOM
+* @param {function} handler A function to execute at the time when the element is inserted
+* @param {bool} shouldRunHandlerOnce Optional: if true, handler is unbound after its first invocation
+* @example $(selector).waitUntilExists(function);
+*/
+
+$.fn.waitUntilExists	= function (handler, shouldRunHandlerOnce, isChild) {
+	var found	= 'found';
+	var $this	= $(this.selector);
+	var $elements	= $this.not(function () { return $(this).data(found); }).each(handler).data(found, true);
+	
+	if (!isChild)
+	{
+		(window.waitUntilExists_Intervals = window.waitUntilExists_Intervals || {})[this.selector] =
+			window.setInterval(function () { $this.waitUntilExists(handler, shouldRunHandlerOnce, true); }, 500)
+		;
+	}
+	else if (shouldRunHandlerOnce && $elements.length)
+	{
+		window.clearInterval(window.waitUntilExists_Intervals[this.selector]);
+	}
+	
+	return $this;
+}
+
+}(jQuery));
+
+$("iframe#twitter-widget-0").waitUntilExists(function(){
+    /*$("iframe#twitter-widget-0").contents().find('head').append('<style>img.u-photo.avatar{display:none !important;}.header.h-card.p-author{padding-left:0;}</style>');*/
+	var css = ' .e-entry-title, .timeline-Tweet-text {word-spacing: 4px; !important; line-height: 19px !important; font-size: 14px !important; font-family: Tahoma, Verdana, Geneva, sans-serif !important; padding-top: 5px !important; padding-bottom: 5px !important;} ';
+	/*css = css + ' .full-name{display:none;} ';*/
+	css = css + ' h1{font-size: 17px !important; font-family: Arial, Helvetica, sans-serif !important; letter-spacing: 1px !important; font-weight: bold !important;} ';
+	css = css + ' .p-name, .TweetAuthor-name, .Identity-name {font-size: 13px !important; font-family: Verdana, Geneva, sans-serif !important;} ';
+	css = css + ' .p-nickname, .TweetAuthor-screenName, .Identity-screenName {font-size: 11px !important; font-family: Verdana, Geneva, sans-serif !important;} ';
+	css = css + ' .timeline-Tweet-retweetCredit, .timeline-Tweet-timestamp {font-family: Tahoma, Verdana, Geneva, sans-serif !important;} ';
+	css = css + ' .timeline-Tweet-retweetCredit {font-size: 12px !important;} ';	
+	css = css + ' .timeline-Tweet-timestamp {font-size: 12px !important;} ';
+	css = css + ' .footer, .timeline-Tweet-actions {display:none !important;} ';
+	$("iframe#twitter-widget-0").contents().find('head').append('<style>' + css + '</style>');
+});

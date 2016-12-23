@@ -1,0 +1,51 @@
+$(function() {
+	$('.cut-link').click(cutLinkClick);
+});
+
+(function($) {
+    $.fn.scrollTo = function() {
+		//var coordinates = 200;
+		var $window = $(window);
+		var offset = 50;
+		if ($window.width() > 880) {
+			offset = 200;
+		}
+		var coordinates = $(this).offset().top - offset;
+		//alert($(this).offset().top);
+		$('html, body').animate({
+			scrollTop: coordinates + 'px'
+		}, 'fast');				
+        return this; // for chaining...
+    }
+})(jQuery);
+
+var cutLinkClick = function() {
+	$field = $(this);//a
+	var fieldID = $field.attr('id');
+	var visibleID = '#span.' + fieldID + '.visible';
+	var invisibleID = '#div.' + fieldID + '.invisible';
+	var v = $(visibleID.replace(/\./g, "\\\."));
+	var inv = $(invisibleID.replace(/\./g, "\\\."));
+	var replaceText = '';
+	if(inv.hasClass('hidden')) {
+		//close all other inner fields
+		$('.cut-invisible').hide(150).addClass('hidden');
+		//show inner inv field, hide outer v field
+		replaceText = v.attr('hide');
+		inv.show(150);
+		inv.removeClass('hidden');
+		if ($field.hasClass('scroll')) {
+			setTimeout(function(){
+				$field.scrollTo();
+			}, 200);			
+		}
+		//inv.scrollTo();
+	} else {
+		//hide inner inv field, show outer v field
+		replaceText = v.attr('show');
+		inv.hide(150);
+		inv.addClass('hidden');
+	}
+	v.html(replaceText);
+	return false;
+}

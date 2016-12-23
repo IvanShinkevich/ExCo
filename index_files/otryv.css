@@ -1,0 +1,64 @@
+ body {background-color: #707070; background-image: url('/img/background/2016-02-asphalt.jpg'); background-repeat: repeat; background-size: auto; background-attachment: fixed;}
+ 
+.website-logo.otryv {background-image: url('/img/logo/2016/otryv16-320x212-gray-8b.png'); background-size: cover;  background-position: 50% 50%;}
+ 
+.color-panel.blue {background-color: #1177BB;}/* 0055CC */
+.color-panel.blue .highlighted {background-color: #1199FF;}
+.color-panel.green {background-color: #227711;} /* 006633 */
+.color-panel.green  .highlighted {background-color: #229911;}
+.color-panel.yellow, .event-type-other-color {background-color: #E87D11;}/* A09011 */
+.color-panel.yellow .highlighted {background-color: #FF9911;}/* #C0A011 */
+.color-panel.red, .event-type-otryv-color {background-color: #CC1111;} /* #CC1111*/
+.color-panel.red .highlighted {background-color: #EE1111;} /* #EE1111*/
+.color-panel.orange {background-color: #E84F11;} /* #DD5500 */
+.color-panel.orange .highlighted {background-color: #FF6611;}
+.color-panel.light.gray {background-color: #E4E4E4;}
+.color-panel.light.gray .highlighted {background-color: #C0C0C0;}
+.color-panel.magenta {background-color: #CC1155;}
+.color-panel.violet {background-color: #3A2986;} /* #DD5500 */
+.color-panel.violet .highlighted {background-color: #4B4BB9;}/* #2D5AD0 4B4BB9 */
+.color-panel.black {background-color: #111111;} /* #DD5500 */
+.color-panel.black .highlighted {background-color: #EE1111;}/* #2D5AD0 4B4BB9 */
+.color-panel.blue-dark {background-color: #112244;}/* 0055CC */
+.color-panel.blue-dark .highlighted {background-color: #114477;}
+.event-type-birthdays-color {background-color: #FFFFE0;}
+
+.event-type-other-color, .event-type-otryv-color {color: #FFFFFF;}
+
+.category.f-hl, .category:link {color: #444444;}
+.category:visited {color: #444444;}
+
+.category.ot.f-hl, .category.ot .f-hl, .category.ot:link {color: #0055CC;}
+.category.ot:visited {color: #0055CC;}/*#4A6A99
+a.category-ot:hover {color: #F01111;}*/
+.category.velo.f-hl, .category.velo .f-hl, .category.velo:link {color: #006633;}
+.category.velo:visited {color: #006633;}/*#668866
+a.category-velo:hover {color: #F01111;}*/
+.category.pesh.f-hl, .category.pesh .f-hl, .category.pesh:link {color: #A09011;}
+.category.pesh:visited {color: #A09011;}/*#A0A066*/
+/*.category-pesh:hover {a.f-hl;}*/
+.category.walk.f-hl, .category.walk .f-hl, .category.walk:link {color: #DD5500;}
+.category.walk:visited {color: #DD5500;}/*#DD8844
+a.category-walk:hover {color: #F01111;}*/
+.category.pesh-blitz.f-hl, .category.pesh-blitz .f-hl, .category.pesh-blitz:link {color: #A09011;}
+.category.pesh-blitz:visited {color: #A09011;}/*#A0A066
+a.category-pesh-blitz:hover {color: #F01111;}*/
+.category.roller.f-hl, .category.roller .f-hl, .category.roller:link {color: #CC1155;}
+.category.roller:visited {color: #CC1155;}/*#DD8844*/
+
+.box.category.ot {background-color: #E1F0FF;}
+.box.category.velo {background-color: #E4FFE4;}
+.box.category.pesh {background-color: #FFFFE0;}
+.box.category.pesh-blitz {background-color: #FFFFE0;}
+.box.category.walk {background-color: #F8E4C9;}
+.box.category.roller {background-color: #FFE4F0;}
+.box.category.auto {background-color: #E4E4E4;}
+.box.category.free {background-color: #E4E4E4;}
+.box.category.ot.dark {background-color: #C2D9F0;}
+.box.category.velo.dark {background-color: #C9E4C9;}
+.box.category.pesh.dark {background-color: #E0E0C1;}
+.box.category.pesh-blitz.dark {background-color: #E0E0C1;}
+.box.category.walk.dark {background-color: #E8CCB2;}
+.box.category.roller.dark {background-color: #E9C2D9;}
+.box.category.auto.dark {background-color: #C9C9C9;}
+.box.category.free.dark {background-color: #C9C9C9;}
