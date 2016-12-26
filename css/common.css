@@ -66,54 +66,6 @@ ul.menu > li > a {
 ul.menu > li > a:hover {
     background-color: #000066;
 }
-ul.submenu {
-    display: none;
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    background-color: transparent;
-}
-ul.submenu > li {
-    display: block;
-}
-ul.submenu > li > a {
-    display: block;
-    padding: 10px;
-    color: white;
-    background-color: #3939A9;
-    text-decoration: none;
-}
-ul.submenu > li > a:hover {
-    background-color: #000066;
-}
-ul.subsubmenu {
-    display: none;
-    position: absolute;
-    width: 50%;
-    top: 17%;
-    left: 100.2%;
-    background-color: transparent;
-}
-ul.subsubmenu > li {
-    display: block;
-}
-ul.subsubmenu > li > a {
-    display: block;
-    padding: 10px;
-    color: white;
-    background-color: #3939A9;
-    text-decoration: none;
-}
-ul.subsubmenu > li > a:hover {
-    background-color: #000066;
-}
-ul.menu > li:hover > ul.submenu {
-    display: block;
-}
-ul.menu > li:hover > ul.submenu > li:hover > ul.subsubmenu{
-    display: block;
-}
 .html {
     margin-left: 5%;
     width: 90%;
