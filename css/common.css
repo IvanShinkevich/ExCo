@@ -1,5 +1,5 @@
 body {
-    font: 16px 'Verdana';
+    font: large 'Verdana';
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -8,6 +8,10 @@ body {
 body::-webkit-scrollbar {
     width: 1em;
     height: 0em;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 body::-webkit-scrollbar-thumb {
     background-color: darkgrey;
@@ -112,42 +116,30 @@ ul.menu > li:hover > ul.submenu > li:hover > ul.subsubmenu{
 }
 .html {
     margin-left: 5%;
-    height: 89.9%;
     width: 90%;
     background: lightgrey;
-    height: 89.9%;
     overflow: hidden;
-    position: relative;
-    top: 10.1%;
+    position: absolute;
+    top: 20%;
 }
 .body {
     background: lightgrey;
-    width: 100%;
-    margin: 0 auto;
-    font: 100%/1.4 serif;
-    border: 1px solid rgba(0,0,0,0.25);
     position: relative;
-    top: 10.1%;
 }
-
 /*текст*/
 .blocks{
     background: whitesmoke;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
 }
 .text{
-    font: 16px 'Verdana';
-}
-.text p{
-    padding: 2em;
-    text-align: center;
+    font: large 'Verdana';
 }
 .undertext{
     font: 12px 'Georgia';
-    text-align: right;
+    text-align: center;
     padding-top: 1em;
-    position: relative;
-    left: -40%;
+    padding-bottom: 1em;
+    position: relative; 
 }
