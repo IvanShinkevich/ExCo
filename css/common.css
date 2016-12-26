@@ -2,6 +2,16 @@ body {
     font: 16px 'Verdana';
     margin: 0;
     padding: 0;
+    overflow: auto;
+    background: lightgrey;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+    height: 0em;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
 }
 /*изображение в шапке страницы*/
 .EXCO {
@@ -15,14 +25,14 @@ body {
 }
 /*меню страницы + закрепление шапки сайта*/
 #headerMain {
-        width:100%;
-        margin:0px auto;
-        z-index:0; 
+    width: 90%;
+    margin:0px auto;
+    z-index:0; 
 }
 #header {
-        width:100%;
-        position: fixed;
-        z-index: 9999;
+    width: 90%;
+    position: fixed;
+    z-index: 9999;
 }
 ul {
     display: block;
@@ -100,8 +110,10 @@ ul.menu > li:hover > ul.submenu {
 ul.menu > li:hover > ul.submenu > li:hover > ul.subsubmenu{
     display: block;
 }
-/*Scrollbar*/
 .html {
+    margin-left: 5%;
+    height: 89.9%;
+    width: 90%;
     background: lightgrey;
     height: 89.9%;
     overflow: hidden;
@@ -109,9 +121,7 @@ ul.menu > li:hover > ul.submenu > li:hover > ul.subsubmenu{
     top: 10.1%;
 }
 .body {
-    height: 89.9%;
     background: lightgrey;
-    overflow: auto;
     width: 100%;
     margin: 0 auto;
     font: 100%/1.4 serif;
@@ -119,18 +129,7 @@ ul.menu > li:hover > ul.submenu > li:hover > ul.subsubmenu{
     position: relative;
     top: 10.1%;
 }
-.body::-webkit-scrollbar {
-    width: 1em;
-    height: 0em;
-}
-.body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-.body::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-}
+
 /*текст*/
 .blocks{
     background: whitesmoke;
